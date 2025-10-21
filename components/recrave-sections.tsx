@@ -45,13 +45,13 @@ export default function RecraveSections() {
   return (
     <div className="w-full bg-black">
       {sections.map((section) => (
-        <div key={section.id} className="w-full">
-          <div className="w-full overflow-hidden">
-            <img
-              src={section.src || "/placeholder.svg"}
-              alt={section.alt}
-              className="w-full h-auto object-cover display-block"
-            />
+        <div
+          key={section.id}
+          className="w-full h-screen"
+          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
+        >
+          <div className="w-full h-full overflow-hidden">
+            <img src={section.src || "/placeholder.svg"} alt={section.alt} className="w-full h-full object-cover" />
           </div>
         </div>
       ))}
